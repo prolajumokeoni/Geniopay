@@ -1,37 +1,43 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import category from "../assets/category.png";
 import dollar from "../assets/dollar.png";
 import users from "../assets/users.png";
 import tag from "../assets/tag.png";
 import wallet from "../assets/wallet-2.png";
+import card from "../assets/card.png";
 
 const NavLinks = () => {
   return (
     <div className="navLinks">
-      <a href="#">
+      <Link to="/">
         <img className="navIcons" src={category} alt="category" />
         Dashboard
-      </a>
-      <a href="#">
+      </Link>
+      <Link to="/">
         <img className="navIcons" src={wallet} alt="wallet-2" />
         Wallet
-      </a>
-      <a href="#">
-        <img className="navIcons" src={dollar} alt="category" />
+      </Link>
+      <Link to="/">
+        <img className="navIcons" src={card} alt="category" />
         Cards
-      </a>
-      <a href="#">
+      </Link>
+      <Link to="/fxcentre">
+        <img className="navIcons" src={dollar} alt="fxcentre" />
+        FX Centre
+      </Link>
+      <Link to="/beneficiaries">
         <img
           className="navIcons users"
           src={users}
           alt="beneficiary"
         />
         Beneficiaries
-      </a>
-      <a href="#">
+      </Link>
+      <Link to="/">
         <img className="navIcons" src={tag} alt="category" />
         perks
-      </a>
+      </Link>
     </div>
   );
 };

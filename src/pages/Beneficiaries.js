@@ -2,7 +2,8 @@ import React from 'react'
 
 const Beneficiaries = () => {
 	return (
-		<div>Beneficiaries</div>
+
+		<div className='benefit'>Beneficiaries</div>
 	)
 }
 

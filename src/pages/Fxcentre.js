@@ -2,7 +2,7 @@ import React from 'react'
 
 const Fxcentre = () => {
 	return (
-		<div>Fxcentre</div>
+		<div className='benefit'>Fxcentre</div>
 	)
 }
 

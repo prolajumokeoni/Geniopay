@@ -3,9 +3,9 @@ import logo from "../assets/logo.png";
 import wallet from "../assets/wallet.png";
 import security from "../assets/security.png";
 import star from "../assets/star.png";
-import NavLinks from '../components/NavLinks';
+import NavLinks from './NavLinks';
 import referral from '../assets/referral.png';
-const Dashboard = () => {
+const Sidebar = () => {
   return (
     <div className="mainFeatures">
       <img src={logo} alt="logo" className="logo" />
@@ -53,4 +53,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default Sidebar;
