@@ -3,6 +3,8 @@ import logo from "../assets/logo.png";
 import wallet from "../assets/wallet.png";
 import security from "../assets/security.png";
 import star from "../assets/star.png";
+import NavLinks from '../components/NavLinks';
+import referral from '../assets/referral.png';
 const Dashboard = () => {
   return (
     <div className="mainFeatures">
@@ -12,22 +14,41 @@ const Dashboard = () => {
 				<div className="wrapper">
           <img src={wallet} alt="wallet" />
           <div className="walletText">
-            <p>Wallet Balance</p>
-            <p>$15,001.00</p>
+            <span>Wallet Balance</span>
+            <br/>
+            <span>$15,001.00</span>
           </div>
 					</div>
-          <img src={security} />
+          <img className="eye" src={security} alt="eye" />
         </div>
-        <div className="ponts">
+        <div className="points">
+        <div className="wrapper">
           <img src={star} alt="star" />
-          <h6>Awarded Points</h6>
-          <p>35</p>
+          <div className="walletText">
+          <span>Awarded Points</span>
+          <br/>
+          <span>35</span>
+          </div> 
         </div>
-				<div>
-					<button>Pay-In</button>
-					<button>Pay-Out</button>
+        </div>
+				<div className="buttonPay">
+					<button className="btn1">Pay-In</button>
+					<button className="btn2">Pay-Out</button>
 				</div>
       </div>
+        <NavLinks />
+        <div className='refer-card'>
+        <div className='referral'>
+          <img className='refer-img' src={referral} alt="referral" />
+          <div className='refer-text'>
+            <h4>Refer and earn</h4>
+            <p>Use the below link to invite friends</p>
+          </div>
+          </div>
+          <div className='btnCard'>
+          <button className="btnGreen">Invite Friends</button>
+          </div>
+        </div>
     </div>
   );
 };
