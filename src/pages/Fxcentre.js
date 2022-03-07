@@ -13,16 +13,20 @@ import euro from "../assets/euro.png";
 import sendnew from "../assets/sendnew.png";
 import { Link } from "react-router-dom";
 import gain from "../assets/GAIN.png";
-
+import addg from "../assets/addg.png";
+import gbp from "../assets/gbp.png";
+import aud from "../assets/aud.png";
+import cad from "../assets/cad.png";
+import redg from "../assets/redg.png";
 const Fxcentre = () => {
-	const data = [
-		{ name: "USD US Dollar", rate: 1.600593, Change: "+0.523" },
-		{ name: "USD US Dollar", rate: 1.600593, Change: "+0.523" },
-		{ name: "USD US Dollar", rate: 1.600593, Change: "+0.532"},
-		{ name: "USD US Dollar", rate: 1.600593, Change: "+0.532"},
-		{ name: "USD US Dollar", rate: 1.600593, Change: "+0.532"},
-	]
-	
+  const data = [
+    { image: aed, name: "USD US Dollar", rate: 1.600593, Change: "+0.523", chart: gain},
+    { image: euro, name: "EUR Euro", rate: 1.600593, Change: "+0.523",  chart: redg},
+    { image: gbp, name: "GBP British Pound", rate: 1.600593, Change: "+0.532",  chart: redg},
+    { image: aud, name: "AUD Australian Dollar", rate: 1.600593, Change: "+0.532",  chart: gain},
+    { image: cad, name: "CAD Canadian Dollar", rate: 1.600593, Change: "+0.532", chart: gain},
+  ];
+
   return (
     <div className="dashboard">
       <nav className="nav1">
@@ -117,24 +121,31 @@ const Fxcentre = () => {
             Other Companies Rates
           </Link>
         </div>
-				<table>
-        <tr className="trHead">
-          <th>Currency</th>
-          <th>Rate</th>
-          <th>Change(24 hrs)</th>
-          <th>Chart(24 hrs)</th>
-        </tr>
-        {data.map((val, key) => {
-          return (
-            <tr key={key}>
-              <td><img src={euro} /> {val.name}</td>
-              <td>{val.rate}</td>
-              <td>{val.Change}</td>
-              <td> <img src={gain} /></td>
-            </tr>
-          )
-        })}
-      </table>
+        <table>
+          <tr className="trHead">
+            <th className="FirstC">Currency</th>
+            <th>Rate</th>
+            <th>Change(24 hrs)</th>
+            <th>Chart(24 hrs)</th>
+          </tr>
+          {data.map((val, key) => {
+            return (
+              <tr key={key}>
+                <td className="firstColumn"><img className="imgTable" src={val.image} /><h6 className="firstText">{val.name}</h6></td>
+                <td>{val.rate}</td>
+                <td><p className="changeText">{val.Change}</p></td>
+                <td>
+                  {" "}
+                  <img src={val.chart} />
+                </td>
+              </tr>
+            );
+          })}
+          <button className="currencyB">
+            <img className="plus" src={addg} />
+            <h4>Add Currency</h4>
+          </button>
+        </table>
       </section>
     </div>
   );

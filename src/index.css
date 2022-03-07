@@ -491,3 +491,32 @@ th {
 td {
   text-align: center;
 }
+
+.currencyB {
+  background-color: white;
+  border: none;
+  color: #017189;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.firstColumn {
+  display: flex;
+  justify-content: flex-start;
+  align-items:  center;
+}
+
+.imgTable {
+  border-radius: 50px;
+  width: 24px;
+  height: 24px;
+}
+
+.FirstC {
+  text-align: left;
+}
+
+.firstText {
+  padding-left: 10px;
+}
