@@ -10,23 +10,23 @@ import card from "../assets/card.png";
 const NavLinks = () => {
   return (
     <div className="navLinks">
-      <Link to="/">
+      <Link className="navLink" to="/">
         <img className="navIcons" src={category} alt="category" />
         Dashboard
       </Link>
-      <Link to="/">
+      <Link className="navLink" to="/">
         <img className="navIcons" src={wallet} alt="wallet-2" />
         Wallet
       </Link>
-      <Link to="/">
+      <Link className="navLink" to="/">
         <img className="navIcons" src={card} alt="category" />
         Cards
       </Link>
-      <Link to="/fxcentre">
+      <Link className="navLink" to="/fxcentre">
         <img className="navIcons" src={dollar} alt="fxcentre" />
         FX Centre
       </Link>
-      <Link to="/beneficiaries">
+      <Link className="navLink" to="/beneficiaries">
         <img
           className="navIcons users"
           src={users}
@@ -34,7 +34,7 @@ const NavLinks = () => {
         />
         Beneficiaries
       </Link>
-      <Link to="/">
+      <Link className="navLink" to="/">
         <img className="navIcons" src={tag} alt="category" />
         perks
       </Link>
