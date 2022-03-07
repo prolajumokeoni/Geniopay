@@ -285,7 +285,7 @@ section a {
   align-items: center;
 }
 
-.borderLink {
+.borderLink:hover {
   border-bottom: 1px solid #017189;
 }
 
@@ -295,6 +295,7 @@ section a {
   width: 95%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 10px;
 }
 
 .euro {
@@ -466,8 +467,27 @@ border-radius: 16px 16px 0px 0px;
 .headTable {
   display: flex;
   justify-content: flex-start;
+  margin: 0 auto;
+  width: 75%;
 }
 
 .headText {
   padding-right: 10px;
+}
+
+table {
+  width: 75%;
+  margin: 0 auto ;
+  height: 200px;
+  background-color: white;
+  border-radius: 16px;
+  padding: 10px;
+}
+  
+th {
+  border-bottom: 1px solid #cbd5e1;
+}
+  
+td {
+  text-align: center;
 }

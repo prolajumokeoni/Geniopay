@@ -11,8 +11,18 @@ import aed from "../assets/aed.png";
 import searchd from "../assets/search-down.png";
 import euro from "../assets/euro.png";
 import sendnew from "../assets/sendnew.png";
+import { Link } from "react-router-dom";
+import gain from "../assets/GAIN.png";
 
 const Fxcentre = () => {
+	const data = [
+		{ name: "USD US Dollar", rate: 1.600593, Change: "+0.523" },
+		{ name: "USD US Dollar", rate: 1.600593, Change: "+0.523" },
+		{ name: "USD US Dollar", rate: 1.600593, Change: "+0.532"},
+		{ name: "USD US Dollar", rate: 1.600593, Change: "+0.532"},
+		{ name: "USD US Dollar", rate: 1.600593, Change: "+0.532"},
+	]
+	
   return (
     <div className="dashboard">
       <nav className="nav1">
@@ -73,9 +83,9 @@ const Fxcentre = () => {
               <h5 className="new">You send:</h5>
               <h4 className="new boldC"> $ 0.00</h4>
             </span>
-						<div className="baseP">
-					<img className="downSwap" src={swap} alt="swap" />
-						</div>
+            <div className="baseP">
+              <img className="downSwap" src={swap} alt="swap" />
+            </div>
           </div>
           <div>
             <h4>To</h4>
@@ -90,17 +100,42 @@ const Fxcentre = () => {
             </span>
           </div>
         </div>
-				<div className="convertDiv">
-					<h3 className="fees">Fees: $0:00</h3>
-					<button className="convertBtn"><img className="btnvert" src={sendnew} alt="convert"/>Convert & Send</button>
-				</div>
+        <div className="convertDiv">
+          <h3 className="fees">Fees: $0:00</h3>
+          <button className="convertBtn">
+            <img className="btnvert" src={sendnew} alt="convert" />
+            Convert & Send
+          </button>
+        </div>
       </nav>
-			<section>
-				<div className="headTable">
-					<h6 className="headText">Live Rates</h6>
-					<h6>Other Companies Rates</h6>
-				</div>
-			</section>
+      <section>
+        <div className="headTable">
+          <Link className="borderLink" to="/beneficiaries">
+            Live Rates
+          </Link>
+          <Link className="borderLink" to="/beneficiaries">
+            Other Companies Rates
+          </Link>
+        </div>
+				<table>
+        <tr className="trHead">
+          <th>Currency</th>
+          <th>Rate</th>
+          <th>Change(24 hrs)</th>
+          <th>Chart(24 hrs)</th>
+        </tr>
+        {data.map((val, key) => {
+          return (
+            <tr key={key}>
+              <td><img src={euro} /> {val.name}</td>
+              <td>{val.rate}</td>
+              <td>{val.Change}</td>
+              <td> <img src={gain} /></td>
+            </tr>
+          )
+        })}
+      </table>
+      </section>
     </div>
   );
 };

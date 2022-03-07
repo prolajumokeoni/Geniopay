@@ -43,12 +43,12 @@ const Beneficiaries = () => {
       </nav>
       <section className="container">
         <nav className="accounts">
-          <Link to="/beneficiaries">Own Accounts</Link>
+          <Link className="borderLink" to="/beneficiaries">Own Accounts</Link>
           <Link className="borderLink" to="/beneficiaries">
             Third Party Accounts
           </Link>
-          <Link to="/beneficiaries">Borderless Recipient</Link>
-          <Link to="/beneficiaries">Mobile Money Recipients</Link>
+          <Link className="borderLink" to="/beneficiaries">Borderless Recipient</Link>
+          <Link className="borderLink" to="/beneficiaries">Mobile Money Recipients</Link>
         </nav>
         <nav className="lastNav">
           <h3 className="headerLast">53 Beneficiaries</h3>
